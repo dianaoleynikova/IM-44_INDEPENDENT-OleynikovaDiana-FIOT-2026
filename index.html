@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Самостійна робота №1 — Олєйнікова Діана, ІМ-44</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<style>
+body { font-family: Arial, Helvetica, sans-serif; max-width: 980px; margin: 0 auto; padding: 16px 20px 60px; line-height: 1.5; color: #111; }
+h1 { text-align: center; font-size: 26px; }
+.meta { text-align: center; }
+h2 { font-size: 20px; background: #e8f0fb; border-left: 5px solid #2563eb; padding: 6px 10px; margin: 36px 0 10px; }
+h2.sub { font-size: 17px; margin-left: 24px; background: #f3f7fd; border-left-color: #93b4ee; }
+.src { font-size: 13px; color: #555; margin: 4px 0 10px; }
+.ex { border: 1px dashed #8a8a8a; padding: 12px; margin: 10px 0; overflow-x: auto; }
+details { margin: 4px 0 14px; }
+summary { cursor: pointer; color: #2563eb; }
+pre { background: #f6f6f6; border: 1px solid #ccc; padding: 10px; overflow-x: auto; font-size: 13px; line-height: 1.4; }
+.top { font-size: 13px; }
+.toc { columns: 2; column-gap: 30px; }
+.toc li { margin-bottom: 2px; }
+.toc ul { margin: 2px 0; }
+.ref td, .ref th { border: 1px solid #888; padding: 4px 8px; text-align: left; vertical-align: top; }
+.ref { border-collapse: collapse; width: 100%; }
+.ref th { background: #e8f0fb; }
+.clear { clear: both; }
+
+.lc a:link    { color: #2563eb; }
+.lc a:visited { color: #7c3aed; }
+.lc a:hover   { color: #dc2626; text-decoration: none; }
+.lc a:active  { color: #f59e0b; }
+
+a.btn { display: inline-block; padding: 6px 14px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 6px; }
+a.btn:hover { background: #1d4ed8; }
+
+.bg-box { background-image: url("images/pattern.svg"); background-repeat: repeat; padding: 30px; border: 1px solid #93b4ee; }
+
+table.t-sep  { border: 1px solid #333; }
+table.t-sep th, table.t-sep td { border: 1px solid #333; }
+table.t-col  { border-collapse: collapse; }
+table.t-col th, table.t-col td { border: 1px solid #333; }
+table.t-round { border: 2px solid #2563eb; border-radius: 8px; border-spacing: 0; }
+table.t-round th, table.t-round td { border-bottom: 1px solid #93b4ee; padding: 6px 10px; }
+
+table.t-full { width: 100%; border-collapse: collapse; }
+table.t-full th, table.t-full td { border: 1px solid #333; padding: 6px; }
+table.t-fix th, table.t-fix td { border: 1px solid #333; padding: 6px; }
+table.t-fix { border-collapse: collapse; }
+
+table.t-h { border-collapse: collapse; }
+table.t-h th, table.t-h td { border: 1px solid #333; padding: 6px 10px; }
+table.t-h th.left { text-align: left; }
+table.t-h th.row { background: #e8f0fb; }
+
+table.t-pad { border-collapse: collapse; }
+table.t-pad th, table.t-pad td { border: 1px solid #333; padding: 15px; }
+table.t-spc { border-spacing: 20px; }
+table.t-spc th, table.t-spc td { border: 1px solid #333; padding: 6px; }
+
+table.t-span { border-collapse: collapse; }
+table.t-span th, table.t-span td { border: 1px solid #333; padding: 6px 10px; text-align: center; }
+
+table.t-zebra { border-collapse: collapse; width: 100%; }
+table.t-zebra th, table.t-zebra td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+table.t-zebra thead th { background: #2563eb; color: #fff; }
+table.t-zebra tbody tr:nth-child(even) { background: #f2f6fc; }
+table.t-zebra tbody tr:hover { background: #fff3bf; }
+
+table.t-cg { border-collapse: collapse; }
+table.t-cg th, table.t-cg td { border: 1px solid #333; padding: 6px 10px; }
+
+ul.menu { list-style-type: none; margin: 0; padding: 0; background: #2563eb; overflow: hidden; }
+ul.menu li { float: left; }
+ul.menu li a { display: block; padding: 10px 16px; color: #fff; text-decoration: none; }
+ul.menu li a:hover { background: #1d4ed8; }
+
+.sem { border: 1px solid #333; }
+.sem header, .sem footer { background: #2563eb; color: #fff; padding: 6px 10px; }
+.sem section { padding: 8px 10px; background: #eff6ff; }
+.sem article { padding: 8px 10px; background: #fff7d6; margin: 6px; }
+</style>
+</head>
+<body>
+<header id="top">
+  <h1>САМОСТІЙНА РОБОТА №1</h1>
+  <p class="meta"><strong>до теми:</strong> структура HTML-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками, формами в HTML-документі</p>
+  <p class="meta"><strong>Виконавець:</strong> студент групи ІМ-44 Олєйнікова Діана. Приклади виконано на матеріалі предметної галузі «Трекер завдань» (TaskTracker).</p>
+</header>
+
+<nav aria-label="Зміст">
+<h3>Зміст</h3>
+<div class="toc">
+<ul>
+  <li><a href="#s2-1">2.1. Що таке HTML?</a></li>
+  <li><a href="#s2-2">2.2. HTML Редактори коду та IDE</a></li>
+  <li><a href="#s2-3">2.3. HTML Основні приклади</a></li>
+  <li><a href="#s2-4">2.4. HTML Елементи</a></li>
+  <li><a href="#s2-5">2.5. HTML Атрибути</a></li>
+  <li><a href="#s2-6">2.6. HTML Параграфи</a></li>
+  <li><a href="#s2-7">2.7. HTML Посилання</a></li>
+  <li style="margin-left:18px"><a href="#s2-7-1">2.7.1. HTML Посилання — Різні кольори</a></li>
+  <li style="margin-left:18px"><a href="#s2-7-2">2.7.2. HTML Посилання — Створення закладок</a></li>
+  <li><a href="#s2-8">2.8. HTML Зображення</a></li>
+  <li style="margin-left:18px"><a href="#s2-8-1">2.8.1. HTML Карти зображень</a></li>
+  <li style="margin-left:18px"><a href="#s2-8-2">2.8.2. HTML Фонові зображення</a></li>
+  <li style="margin-left:18px"><a href="#s2-8-3">2.8.3. HTML елемент &lt;picture&gt;</a></li>
+  <li style="margin-left:18px"><a href="#s2-8-4">2.8.4. HTML Favicon / Фавікон</a></li>
+  <li><a href="#s2-9">2.9. HTML Таблиці</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-1">2.9.1. HTML Межі таблиці</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-2">2.9.2. HTML Розмір таблиці</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-3">2.9.3. HTML Заголовки таблиць</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-4">2.9.4. HTML Таблиці. Padding &amp; Spacing</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-5">2.9.5. HTML Таблиці. Colspan &amp; Rowspan</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-6">2.9.6. HTML Стилізація таблиць</a></li>
+  <li style="margin-left:18px"><a href="#s2-9-7">2.9.7. HTML Група стовпців таблиці</a></li>
+  <li><a href="#s2-10">2.10. HTML Списки</a></li>
+  <li style="margin-left:18px"><a href="#s2-10-1">2.10.1. HTML Невпорядковані списки</a></li>
+  <li style="margin-left:18px"><a href="#s2-10-2">2.10.2. HTML Впорядковані списки</a></li>
+  <li style="margin-left:18px"><a href="#s2-10-3">2.10.3. HTML Інші списки</a></li>
+  <li><a href="#s3-1">3.1. HTML Форми</a></li>
+  <li style="margin-left:18px"><a href="#s3-1-1">3.1.1. HTML Атрибути форми</a></li>
+  <li style="margin-left:18px"><a href="#s3-1-2">3.1.2. HTML Елементи форми</a></li>
+  <li style="margin-left:18px"><a href="#s3-1-3">3.1.3. HTML Типи вводу</a></li>
+  <li style="margin-left:18px"><a href="#s3-1-4">3.1.4. HTML Атрибути вводу</a></li>
+  <li style="margin-left:18px"><a href="#s3-1-5">3.1.5. HTML Атрибути Input форми</a></li>
+  <li><a href="#s4">4. HTML Основи — приклади</a></li>
+  <li><a href="#s5">5. HTML5</a></li>
+  <li><a href="#s6">6. HTML Довідник тегів</a></li>
+</ul>
+</div>
+</nav>
+
+<main>
+<section>
+<h2 id="s2-1">2.1. Що таке HTML?</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_intro.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_intro.html</a></p>
+<p><strong>HTML</strong> (HyperText Markup Language) — стандартна мова розмітки веб-сторінок. Вона описує структуру документа за допомогою елементів (тегів), які браузер перетворює на видимий вміст: заголовки, абзаци, таблиці, зображення, форми.</p>
+<ul>
+<li>HTML описує <em>структуру</em> сторінки, а не її зовнішній вигляд (його задає CSS).</li>
+<li>Елементи HTML позначаються тегами, наприклад <code>&lt;p&gt;</code>.</li>
+<li>Браузер не показує самі теги, а використовує їх, щоб відобразити вміст.</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Назва сторінки&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Мій перший заголовок&lt;/h1&gt;
+  &lt;p&gt;Мій перший абзац.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="ex">
+<h1 style="text-align:left;font-size:24px;margin:0">Мій перший заголовок</h1>
+<p>Мій перший абзац.</p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;h1 style="text-align:left;font-size:24px;margin:0"&gt;Мій перший заголовок&lt;/h1&gt;
+&lt;p&gt;Мій перший абзац.&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-2">2.2. HTML Редактори коду та IDE</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_editors.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_editors.html</a></p>
+<p>Для написання HTML достатньо простого текстового редактора. Популярні редактори та середовища розробки:</p>
+<ul>
+<li><strong>Visual Studio Code</strong> — безкоштовний редактор з розширенням Live Server;</li>
+<li><strong>Notepad++</strong> — легкий редактор для Windows;</li>
+<li><strong>Sublime Text</strong> — швидкий редактор з підсвічуванням синтаксису;</li>
+<li><strong>WebStorm</strong> — повноцінне IDE для веб-розробки.</li>
+</ul>
+<p>Порядок роботи:</p>
+<ol>
+<li>Відкрити редактор і створити новий файл.</li>
+<li>Написати HTML-код.</li>
+<li>Зберегти файл з розширенням <code>.html</code> (наприклад, <code>index.html</code>) у кодуванні UTF-8.</li>
+<li>Відкрити файл у браузері (або запустити Live Server).</li>
+</ol>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-3">2.3. HTML Основні приклади</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_basic.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_basic.html</a></p>
+<p>Основні елементи сторінки: заголовки, абзаци, посилання, зображення.</p>
+<div class="ex">
+<h1>Заголовок 1</h1>
+<div style="font-size:1.5em;font-weight:bold;margin:.83em 0">Заголовок 2</div>
+<h3>Заголовок 3</h3>
+<h4>Заголовок 4</h4>
+<h5>Заголовок 5</h5>
+<h6>Заголовок 6</h6>
+<p>Це абзац тексту.</p>
+<p>Це <a href="https://w3schoolsua.github.io/html/index.html" target="_blank">посилання</a> на підручник.</p>
+<img src="images/task-board.svg" alt="Дошка завдань" width="300" height="150">
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;h1&gt;Заголовок 1&lt;/h1&gt;
+&lt;h2&gt;Заголовок 2&lt;/h2&gt;
+&lt;h3&gt;Заголовок 3&lt;/h3&gt;
+&lt;h4&gt;Заголовок 4&lt;/h4&gt;
+&lt;h5&gt;Заголовок 5&lt;/h5&gt;
+&lt;h6&gt;Заголовок 6&lt;/h6&gt;
+&lt;p&gt;Це абзац тексту.&lt;/p&gt;
+&lt;p&gt;Це &lt;a href="https://w3schoolsua.github.io/html/index.html" target="_blank"&gt;посилання&lt;/a&gt; на підручник.&lt;/p&gt;
+&lt;img src="images/task-board.svg" alt="Дошка завдань" width="300" height="150"&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-4">2.4. HTML Елементи</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_elements.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_elements.html</a></p>
+<p>HTML-елемент складається з початкового тега, вмісту та кінцевого тега.</p>
+<table class="ref">
+<tr><th>Початковий тег</th><th>Вміст елемента</th><th>Кінцевий тег</th></tr>
+<tr><td><code>&lt;h1&gt;</code></td><td>Мій перший заголовок</td><td><code>&lt;/h1&gt;</code></td></tr>
+<tr><td><code>&lt;p&gt;</code></td><td>Мій перший абзац</td><td><code>&lt;/p&gt;</code></td></tr>
+<tr><td><code>&lt;br&gt;</code></td><td>— (порожній елемент)</td><td>— (кінцевого тега немає)</td></tr>
+</table>
+<p>Елементи можуть бути вкладеними: <code>&lt;html&gt;</code> містить <code>&lt;body&gt;</code>, а той — <code>&lt;h1&gt;</code> і <code>&lt;p&gt;</code>.</p>
+<div class="ex">
+<p>Завдання має <strong>високий</strong> пріоритет і <em>близький</em> дедлайн.<br>
+Другий рядок отримано порожнім елементом br.</p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;p&gt;Завдання має &lt;strong&gt;високий&lt;/strong&gt; пріоритет і &lt;em&gt;близький&lt;/em&gt; дедлайн.&lt;br&gt;
+Другий рядок отримано порожнім елементом br.&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-5">2.5. HTML Атрибути</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_attributes.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_attributes.html</a></p>
+<p>Атрибути надають елементам додаткову інформацію. Вони записуються в початковому тезі у вигляді <code>ім’я="значення"</code>.</p>
+<ul>
+<li><code>href</code> — адреса посилання;</li>
+<li><code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code> — для зображень;</li>
+<li><code>style</code> — вбудований стиль;</li>
+<li><code>lang</code> — мова документа (<code>&lt;html lang="uk"&gt;</code>);</li>
+<li><code>title</code> — підказка при наведенні курсора.</li>
+</ul>
+<div class="ex">
+<p><a href="https://w3schoolsua.github.io/html/html_attributes.html" target="_blank" title="Відкрити підручник">Посилання з атрибутами href, target, title</a></p>
+<img src="images/task-board.svg" alt="Дошка завдань" width="200" height="100">
+<p style="color: #dc2626;">Цей абзац червоний (атрибут style).</p>
+<p title="Я підказка">Наведи курсор на цей абзац (атрибут title).</p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;p&gt;&lt;a href="https://w3schoolsua.github.io/html/html_attributes.html" target="_blank" title="Відкрити підручник"&gt;Посилання з атрибутами href, target, title&lt;/a&gt;&lt;/p&gt;
+&lt;img src="images/task-board.svg" alt="Дошка завдань" width="200" height="100"&gt;
+&lt;p style="color: #dc2626;"&gt;Цей абзац червоний (атрибут style).&lt;/p&gt;
+&lt;p title="Я підказка"&gt;Наведи курсор на цей абзац (атрибут title).&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-6">2.6. HTML Параграфи</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_paragraphs.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_paragraphs.html</a></p>
+<p>Абзац створюється елементом <code>&lt;p&gt;</code>. Браузер сам додає відступи до і після абзацу.</p>
+<div class="ex">
+<p>Перший абзац.</p>
+<p>Другий абзац.</p>
+<hr>
+<p>Рядок один,<br>рядок два,<br>рядок три (елемент br).</p>
+<pre>Елемент pre
+   зберігає  пробіли
+      та переноси рядків.</pre>
+<p style="text-align: center;">Вирівнювання по центру.</p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;p&gt;Перший абзац.&lt;/p&gt;
+&lt;p&gt;Другий абзац.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Рядок один,&lt;br&gt;рядок два,&lt;br&gt;рядок три (елемент br).&lt;/p&gt;
+&lt;pre&gt;Елемент pre
+   зберігає  пробіли
+      та переноси рядків.&lt;/pre&gt;
+&lt;p style="text-align: center;"&gt;Вирівнювання по центру.&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-7">2.7. HTML Посилання</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_links.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_links.html</a></p>
+<p>Посилання створюється елементом <code>&lt;a&gt;</code> з атрибутом <code>href</code>.</p>
+<div class="ex">
+<p><a href="https://w3schoolsua.github.io/html/index.html">Абсолютне посилання</a> на інший сайт</p>
+<p><a href="#s2-9">Відносне посилання</a> на розділ 2.9 цієї сторінки</p>
+<p><a href="https://www.w3schools.com/" target="_blank" rel="noopener">Посилання, що відкривається в новій вкладці</a></p>
+<p><a href="https://w3schoolsua.github.io/html/index.html"><img src="images/task-board.svg" alt="Дошка завдань" width="160" height="80"></a> — зображення як посилання</p>
+<p><a href="mailto:student@example.com">Написати листа</a> (mailto)</p>
+<p><a class="btn" href="#top">Кнопка-посилання «Нагору»</a></p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+a.btn { display: inline-block; padding: 6px 14px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 6px; }
+a.btn:hover { background: #1d4ed8; }
+&lt;/style&gt;
+
+&lt;p&gt;&lt;a href="https://w3schoolsua.github.io/html/index.html"&gt;Абсолютне посилання&lt;/a&gt; на інший сайт&lt;/p&gt;
+&lt;p&gt;&lt;a href="#s2-9"&gt;Відносне посилання&lt;/a&gt; на розділ 2.9 цієї сторінки&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.w3schools.com/" target="_blank" rel="noopener"&gt;Посилання, що відкривається в новій вкладці&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://w3schoolsua.github.io/html/index.html"&gt;&lt;img src="images/task-board.svg" alt="Дошка завдань" width="160" height="80"&gt;&lt;/a&gt; — зображення як посилання&lt;/p&gt;
+&lt;p&gt;&lt;a href="mailto:student@example.com"&gt;Написати листа&lt;/a&gt; (mailto)&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn" href="#top"&gt;Кнопка-посилання «Нагору»&lt;/a&gt;&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-7-1" class="sub">2.7.1. HTML Посилання — Різні кольори</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_links_colors.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_links_colors.html</a></p>
+<p>Колір посилання залежить від його стану: <code>a:link</code> — ще не відвідане, <code>a:visited</code> — відвідане, <code>a:hover</code> — під курсором, <code>a:active</code> — у момент натискання.</p>
+<div class="ex">
+<p class="lc">
+<a href="https://w3schoolsua.github.io/html/html_links_colors.html" target="_blank">Посилання, що змінює колір</a> |
+<a href="https://w3schoolsua.github.io/tags/index.html" target="_blank">Довідник тегів</a>
+</p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+.lc a:link    { color: #2563eb; }
+.lc a:visited { color: #7c3aed; }
+.lc a:hover   { color: #dc2626; text-decoration: none; }
+.lc a:active  { color: #f59e0b; }
+&lt;/style&gt;
+
+&lt;p class="lc"&gt;
+&lt;a href="https://w3schoolsua.github.io/html/html_links_colors.html" target="_blank"&gt;Посилання, що змінює колір&lt;/a&gt; |
+&lt;a href="https://w3schoolsua.github.io/tags/index.html" target="_blank"&gt;Довідник тегів&lt;/a&gt;
+&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-7-2" class="sub">2.7.2. HTML Посилання — Створення закладок</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_links_bookmarks.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_links_bookmarks.html</a></p>
+<p>Закладка — це елемент з атрибутом <code>id</code>. Посилання на неї записується як <code>href="#id"</code>. Можна посилатися й на закладку іншої сторінки: <code>href="сторінка.html#id"</code>.</p>
+<div class="ex">
+<p><a href="#bm-c3">Перейти до розділу 3</a> |
+<a href="index.html#s2-10">Посилання на закладку #s2-10 (повна адреса)</a></p>
+<h3 id="bm-c1">Розділ 1</h3>
+<p>Текст розділу 1.</p>
+<h3 id="bm-c2">Розділ 2</h3>
+<p>Текст розділу 2.</p>
+<h3 id="bm-c3">Розділ 3</h3>
+<p>Сюди веде закладка bm-c3. <a href="#bm-c1">Повернутися до розділу 1</a></p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;p&gt;&lt;a href="#bm-c3"&gt;Перейти до розділу 3&lt;/a&gt; |
+&lt;a href="index.html#s2-10"&gt;Посилання на закладку #s2-10 (повна адреса)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="bm-c1"&gt;Розділ 1&lt;/h3&gt;
+&lt;p&gt;Текст розділу 1.&lt;/p&gt;
+&lt;h3 id="bm-c2"&gt;Розділ 2&lt;/h3&gt;
+&lt;p&gt;Текст розділу 2.&lt;/p&gt;
+&lt;h3 id="bm-c3"&gt;Розділ 3&lt;/h3&gt;
+&lt;p&gt;Сюди веде закладка bm-c3. &lt;a href="#bm-c1"&gt;Повернутися до розділу 1&lt;/a&gt;&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-8">2.8. HTML Зображення</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_images.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_images.html</a></p>
+<p>Зображення вставляється елементом <code>&lt;img&gt;</code>. Обов’язкові атрибути: <code>src</code> (шлях до файлу) та <code>alt</code> (альтернативний текст). Розміри задають атрибутами <code>width</code> і <code>height</code> або властивістю <code>style</code>.</p>
+<div class="ex">
+<img src="images/task-board.svg" alt="Дошка завдань TaskTracker" width="400" height="200">
+<p>Те саме зображення, зменшене через style:</p>
+<img src="images/task-board.svg" alt="Дошка завдань TaskTracker" style="width: 200px; height: 100px;">
+<p>Зображення з неіснуючим файлом показує alt-текст:</p>
+<img src="images/no-such-file.svg" alt="Тут мало бути зображення" width="200" height="40">
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;img src="images/task-board.svg" alt="Дошка завдань TaskTracker" width="400" height="200"&gt;
+&lt;p&gt;Те саме зображення, зменшене через style:&lt;/p&gt;
+&lt;img src="images/task-board.svg" alt="Дошка завдань TaskTracker" style="width: 200px; height: 100px;"&gt;
+&lt;p&gt;Зображення з неіснуючим файлом показує alt-текст:&lt;/p&gt;
+&lt;img src="images/no-such-file.svg" alt="Тут мало бути зображення" width="200" height="40"&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-8-1" class="sub">2.8.1. HTML Карти зображень</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_images_imagemap.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_images_imagemap.html</a></p>
+<p>Карта зображення дозволяє зробити клікабельними окремі області картинки: елемент <code>&lt;map&gt;</code> з областями <code>&lt;area&gt;</code> різних форм (<code>rect</code>, <code>circle</code>, <code>poly</code>). Зображення пов’язується з картою атрибутом <code>usemap</code>. Клікни на колонку дошки — перейдеш до відповідного розділу.</p>
+<div class="ex">
+<img src="images/task-board.svg" alt="Дошка завдань" width="400" height="200" usemap="#taskmap">
+<map name="taskmap">
+  <area shape="rect" coords="10,30,130,190" href="#s2-9" alt="До виконання → таблиці">
+  <area shape="rect" coords="140,30,260,190" href="#s2-10" alt="В роботі → списки">
+  <area shape="rect" coords="270,30,390,190" href="#s3-1" alt="Виконано → форми">
+  <area shape="circle" coords="372,14,12" href="#top" alt="Нагору">
+</map>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;img src="images/task-board.svg" alt="Дошка завдань" width="400" height="200" usemap="#taskmap"&gt;
+&lt;map name="taskmap"&gt;
+  &lt;area shape="rect" coords="10,30,130,190" href="#s2-9" alt="До виконання → таблиці"&gt;
+  &lt;area shape="rect" coords="140,30,260,190" href="#s2-10" alt="В роботі → списки"&gt;
+  &lt;area shape="rect" coords="270,30,390,190" href="#s3-1" alt="Виконано → форми"&gt;
+  &lt;area shape="circle" coords="372,14,12" href="#top" alt="Нагору"&gt;
+&lt;/map&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-8-2" class="sub">2.8.2. HTML Фонові зображення</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_images_background.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_images_background.html</a></p>
+<p>Фонове зображення задається в CSS властивістю <code>background-image</code> для будь-якого елемента. За замовчуванням воно повторюється (<code>repeat</code>).</p>
+<div class="ex">
+<div class="bg-box">
+  <p style="background:#fff;padding:8px;margin:0">Текст на фоні, що складається з повторюваної картинки.</p>
+</div>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+.bg-box { background-image: url("images/pattern.svg"); background-repeat: repeat; padding: 30px; border: 1px solid #93b4ee; }
+&lt;/style&gt;
+
+&lt;div class="bg-box"&gt;
+  &lt;p style="background:#fff;padding:8px;margin:0"&gt;Текст на фоні, що складається з повторюваної картинки.&lt;/p&gt;
+&lt;/div&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-8-3" class="sub">2.8.3. HTML елемент &lt;picture&gt;</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_images_picture.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_images_picture.html</a></p>
+<p>Елемент <code>&lt;picture&gt;</code> дозволяє показати різні зображення залежно від ширини екрана. Браузер бере перший підходящий <code>&lt;source&gt;</code>, а якщо жоден не підійшов — звичайний <code>&lt;img&gt;</code>. Змінюй ширину вікна браузера, щоб побачити різницю (межа — 650 px).</p>
+<div class="ex">
+<picture>
+  <source media="(min-width: 650px)" srcset="images/wide.svg">
+  <img src="images/narrow.svg" alt="Банер TaskTracker" style="width: 100%; max-width: 800px;">
+</picture>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;picture&gt;
+  &lt;source media="(min-width: 650px)" srcset="images/wide.svg"&gt;
+  &lt;img src="images/narrow.svg" alt="Банер TaskTracker" style="width: 100%; max-width: 800px;"&gt;
+&lt;/picture&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-8-4" class="sub">2.8.4. HTML Favicon / Фавікон</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_favicon.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_favicon.html</a></p>
+<p>Фавікон — маленька іконка сайту у вкладці браузера. Її підключають в елементі <code>&lt;head&gt;</code> за допомогою <code>&lt;link&gt;</code>. У цьому документі вона вже підключена — подивись на вкладку.</p>
+<pre><code>&lt;head&gt;
+  &lt;title&gt;Самостійна робота №1&lt;/title&gt;
+  &lt;link rel="icon" type="image/svg+xml" href="images/favicon.svg"&gt;
+&lt;/head&gt;</code></pre>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9">2.9. HTML Таблиці</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_tables.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_tables.html</a></p>
+<p>Таблиця створюється елементом <code>&lt;table&gt;</code>. Рядки — <code>&lt;tr&gt;</code>, комірки-заголовки — <code>&lt;th&gt;</code>, комірки з даними — <code>&lt;td&gt;</code>.</p>
+<div class="ex">
+<table>
+  <tr>
+    <th>Завдання</th>
+    <th>Виконавець</th>
+    <th>Статус</th>
+  </tr>
+  <tr>
+    <td>Розробити макет</td>
+    <td>Діана О.</td>
+    <td>Виконано</td>
+  </tr>
+  <tr>
+    <td>Налаштувати базу даних</td>
+    <td>Максим Д.</td>
+    <td>В роботі</td>
+  </tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Завдання&lt;/th&gt;
+    &lt;th&gt;Виконавець&lt;/th&gt;
+    &lt;th&gt;Статус&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Розробити макет&lt;/td&gt;
+    &lt;td&gt;Діана О.&lt;/td&gt;
+    &lt;td&gt;Виконано&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Налаштувати базу даних&lt;/td&gt;
+    &lt;td&gt;Максим Д.&lt;/td&gt;
+    &lt;td&gt;В роботі&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-1" class="sub">2.9.1. HTML Межі таблиці</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_borders.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_borders.html</a></p>
+<p>Межі задаються властивістю <code>border</code> для <code>table</code>, <code>th</code> і <code>td</code>. Властивість <code>border-collapse: collapse</code> об’єднує подвійні межі в одну, а <code>border-radius</code> заокруглює кути.</p>
+<h3>Окремі межі</h3>
+<div class="ex">
+<table class="t-sep">
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;table class="t-sep"&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details><h3>Об’єднані межі (collapse)</h3><div class="ex">
+<table class="t-col">
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;table class="t-col"&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details><h3>Заокруглена межа</h3><div class="ex">
+<table class="t-round">
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;table class="t-round"&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details><pre><code>&lt;style&gt;
+table.t-sep  { border: 1px solid #333; }
+table.t-sep th, table.t-sep td { border: 1px solid #333; }
+table.t-col  { border-collapse: collapse; }
+table.t-col th, table.t-col td { border: 1px solid #333; }
+table.t-round { border: 2px solid #2563eb; border-radius: 8px; border-spacing: 0; }
+table.t-round th, table.t-round td { border-bottom: 1px solid #93b4ee; padding: 6px 10px; }
+&lt;/style&gt;</code></pre>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-2" class="sub">2.9.2. HTML Розмір таблиці</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_sizes.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_sizes.html</a></p>
+<p>Розмір таблиці задають властивостями <code>width</code> і <code>height</code>. Ширину окремих стовпців — <code>width</code> у <code>th</code>/<code>td</code>.</p>
+<h3>Таблиця на всю ширину</h3>
+<div class="ex">
+<table class="t-full">
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-full { width: 100%; border-collapse: collapse; }
+table.t-full th, table.t-full td { border: 1px solid #333; padding: 6px; }
+table.t-fix th, table.t-fix td { border: 1px solid #333; padding: 6px; }
+table.t-fix { border-collapse: collapse; }
+&lt;/style&gt;
+
+&lt;table class="t-full"&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details><h3>Задані ширина й висота</h3><div class="ex">
+<table class="t-fix" style="width: 60%; height: 120px;">
+  <tr><th style="width: 50%;">Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-full { width: 100%; border-collapse: collapse; }
+table.t-full th, table.t-full td { border: 1px solid #333; padding: 6px; }
+table.t-fix th, table.t-fix td { border: 1px solid #333; padding: 6px; }
+table.t-fix { border-collapse: collapse; }
+&lt;/style&gt;
+
+&lt;table class="t-fix" style="width: 60%; height: 120px;"&gt;
+  &lt;tr&gt;&lt;th style="width: 50%;"&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-3" class="sub">2.9.3. HTML Заголовки таблиць</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_headers.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_headers.html</a></p>
+<p>Заголовки — це комірки <code>&lt;th&gt;</code>. За замовчуванням вони жирні й по центру. Заголовками можуть бути й комірки першого стовпця (вертикальні заголовки). Підпис до таблиці задає <code>&lt;caption&gt;</code>.</p>
+<h3>Горизонтальні заголовки з підписом</h3>
+<div class="ex">
+<table class="t-h">
+  <caption>Завдання проєкту</caption>
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-h { border-collapse: collapse; }
+table.t-h th, table.t-h td { border: 1px solid #333; padding: 6px 10px; }
+table.t-h th.left { text-align: left; }
+table.t-h th.row { background: #e8f0fb; }
+&lt;/style&gt;
+
+&lt;table class="t-h"&gt;
+  &lt;caption&gt;Завдання проєкту&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details><h3>Вертикальні заголовки, вирівняні по лівому краю</h3><div class="ex">
+<table class="t-h">
+  <tr><th class="row left">Завдання</th><td>Розробити макет</td></tr>
+  <tr><th class="row left">Виконавець</th><td>Діана О.</td></tr>
+  <tr><th class="row left">Статус</th><td>Виконано</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-h { border-collapse: collapse; }
+table.t-h th, table.t-h td { border: 1px solid #333; padding: 6px 10px; }
+table.t-h th.left { text-align: left; }
+table.t-h th.row { background: #e8f0fb; }
+&lt;/style&gt;
+
+&lt;table class="t-h"&gt;
+  &lt;tr&gt;&lt;th class="row left"&gt;Завдання&lt;/th&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th class="row left"&gt;Виконавець&lt;/th&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th class="row left"&gt;Статус&lt;/th&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-4" class="sub">2.9.4. HTML Таблиці. Padding &amp; Spacing</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_padding_spacing.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_padding_spacing.html</a></p>
+<p><code>padding</code> — відступ між межею комірки та її вмістом. <code>border-spacing</code> — відстань між комірками (працює без <code>border-collapse: collapse</code>).</p>
+<h3>padding: 15px</h3>
+<div class="ex">
+<table class="t-pad">
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-pad { border-collapse: collapse; }
+table.t-pad th, table.t-pad td { border: 1px solid #333; padding: 15px; }
+table.t-spc { border-spacing: 20px; }
+table.t-spc th, table.t-spc td { border: 1px solid #333; padding: 6px; }
+&lt;/style&gt;
+
+&lt;table class="t-pad"&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details><h3>border-spacing: 20px</h3><div class="ex">
+<table class="t-spc">
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-pad { border-collapse: collapse; }
+table.t-pad th, table.t-pad td { border: 1px solid #333; padding: 15px; }
+table.t-spc { border-spacing: 20px; }
+table.t-spc th, table.t-spc td { border: 1px solid #333; padding: 6px; }
+&lt;/style&gt;
+
+&lt;table class="t-spc"&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-5" class="sub">2.9.5. HTML Таблиці. Colspan &amp; Rowspan</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_colspan_rowspan.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_colspan_rowspan.html</a></p>
+<p><code>colspan</code> об’єднує комірки по горизонталі, <code>rowspan</code> — по вертикалі.</p>
+<div class="ex">
+<table class="t-span">
+  <tr><th colspan="3">Розклад команди</th></tr>
+  <tr><th>Виконавець</th><th>Завдання</th><th>Статус</th></tr>
+  <tr><td rowspan="2">Діана О.</td><td>Макет</td><td>Виконано</td></tr>
+  <tr><td>Верстка</td><td>В роботі</td></tr>
+  <tr><td>Максим Д.</td><td>База даних</td><td>На перевірці</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-span { border-collapse: collapse; }
+table.t-span th, table.t-span td { border: 1px solid #333; padding: 6px 10px; text-align: center; }
+&lt;/style&gt;
+
+&lt;table class="t-span"&gt;
+  &lt;tr&gt;&lt;th colspan="3"&gt;Розклад команди&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td rowspan="2"&gt;Діана О.&lt;/td&gt;&lt;td&gt;Макет&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Верстка&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;База даних&lt;/td&gt;&lt;td&gt;На перевірці&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-6" class="sub">2.9.6. HTML Стилізація таблиць</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_styling.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_styling.html</a></p>
+<p>За допомогою CSS таблицю можна оформити: смугасті рядки (<code>nth-child</code>), підсвічування під курсором (<code>:hover</code>), кольорова шапка.</p>
+<div class="ex">
+<table class="t-zebra">
+  <thead>
+    <tr><th>Завдання</th><th>Виконавець</th><th>Пріоритет</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Розробити макет</td><td>Діана О.</td><td>Високий</td></tr>
+    <tr><td>Зверстати сторінку</td><td>Діана О.</td><td>Середній</td></tr>
+    <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>Високий</td></tr>
+    <tr><td>Документація API</td><td>Софія Т.</td><td>Низький</td></tr>
+  </tbody>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-zebra { border-collapse: collapse; width: 100%; }
+table.t-zebra th, table.t-zebra td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+table.t-zebra thead th { background: #2563eb; color: #fff; }
+table.t-zebra tbody tr:nth-child(even) { background: #f2f6fc; }
+table.t-zebra tbody tr:hover { background: #fff3bf; }
+&lt;/style&gt;
+
+&lt;table class="t-zebra"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Пріоритет&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Високий&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Зверстати сторінку&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Середній&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;Високий&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Документація API&lt;/td&gt;&lt;td&gt;Софія Т.&lt;/td&gt;&lt;td&gt;Низький&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-9-7" class="sub">2.9.7. HTML Група стовпців таблиці</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_table_colgroup.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_table_colgroup.html</a></p>
+<p>Елемент <code>&lt;colgroup&gt;</code> з дочірніми <code>&lt;col&gt;</code> дозволяє оформити цілі стовпці одразу.</p>
+<div class="ex">
+<table class="t-cg">
+  <colgroup>
+    <col span="1" style="background-color: #dbeafe; width: 200px;">
+    <col span="2" style="background-color: #fef3c7;">
+  </colgroup>
+  <tr><th>Завдання</th><th>Виконавець</th><th>Статус</th></tr>
+  <tr><td>Розробити макет</td><td>Діана О.</td><td>Виконано</td></tr>
+  <tr><td>Налаштувати БД</td><td>Максим Д.</td><td>В роботі</td></tr>
+</table>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+table.t-cg { border-collapse: collapse; }
+table.t-cg th, table.t-cg td { border: 1px solid #333; padding: 6px 10px; }
+&lt;/style&gt;
+
+&lt;table class="t-cg"&gt;
+  &lt;colgroup&gt;
+    &lt;col span="1" style="background-color: #dbeafe; width: 200px;"&gt;
+    &lt;col span="2" style="background-color: #fef3c7;"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;&lt;th&gt;Завдання&lt;/th&gt;&lt;th&gt;Виконавець&lt;/th&gt;&lt;th&gt;Статус&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Розробити макет&lt;/td&gt;&lt;td&gt;Діана О.&lt;/td&gt;&lt;td&gt;Виконано&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Налаштувати БД&lt;/td&gt;&lt;td&gt;Максим Д.&lt;/td&gt;&lt;td&gt;В роботі&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-10">2.10. HTML Списки</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_lists.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_lists.html</a></p>
+<p>У HTML є три види списків: невпорядкований (<code>&lt;ul&gt;</code>), впорядкований (<code>&lt;ol&gt;</code>) та список визначень (<code>&lt;dl&gt;</code>).</p>
+<div class="ex">
+<ul>
+  <li>Маркований елемент</li>
+  <li>Ще один елемент</li>
+</ul>
+<ol>
+  <li>Нумерований елемент</li>
+  <li>Ще один елемент</li>
+</ol>
+<dl>
+  <dt>Статус</dt>
+  <dd>Поточний етап виконання завдання</dd>
+</dl>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;ul&gt;
+  &lt;li&gt;Маркований елемент&lt;/li&gt;
+  &lt;li&gt;Ще один елемент&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Нумерований елемент&lt;/li&gt;
+  &lt;li&gt;Ще один елемент&lt;/li&gt;
+&lt;/ol&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Статус&lt;/dt&gt;
+  &lt;dd&gt;Поточний етап виконання завдання&lt;/dd&gt;
+&lt;/dl&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-10-1" class="sub">2.10.1. HTML Невпорядковані списки</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_lists_unordered.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_lists_unordered.html</a></p>
+<p>Вигляд маркера змінює <code>list-style-type</code>: <code>disc</code>, <code>circle</code>, <code>square</code>, <code>none</code>. Списки можна вкладати один в одного.</p>
+<div class="ex">
+<ul style="list-style-type: disc;"><li>disc (круг)</li></ul>
+<ul style="list-style-type: circle;"><li>circle (коло)</li></ul>
+<ul style="list-style-type: square;"><li>square (квадрат)</li></ul>
+<ul style="list-style-type: none;"><li>none (без маркера)</li></ul>
+<h4>Вкладений список</h4>
+<ul>
+  <li>Керування завданнями
+    <ul>
+      <li>створення</li>
+      <li>редагування</li>
+    </ul>
+  </li>
+  <li>Сповіщення</li>
+</ul>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;ul style="list-style-type: disc;"&gt;&lt;li&gt;disc (круг)&lt;/li&gt;&lt;/ul&gt;
+&lt;ul style="list-style-type: circle;"&gt;&lt;li&gt;circle (коло)&lt;/li&gt;&lt;/ul&gt;
+&lt;ul style="list-style-type: square;"&gt;&lt;li&gt;square (квадрат)&lt;/li&gt;&lt;/ul&gt;
+&lt;ul style="list-style-type: none;"&gt;&lt;li&gt;none (без маркера)&lt;/li&gt;&lt;/ul&gt;
+&lt;h4&gt;Вкладений список&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Керування завданнями
+    &lt;ul&gt;
+      &lt;li&gt;створення&lt;/li&gt;
+      &lt;li&gt;редагування&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Сповіщення&lt;/li&gt;
+&lt;/ul&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-10-2" class="sub">2.10.2. HTML Впорядковані списки</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_lists_ordered.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_lists_ordered.html</a></p>
+<p>Атрибут <code>type</code> задає вигляд нумерації (<code>1</code>, <code>A</code>, <code>a</code>, <code>I</code>, <code>i</code>), <code>start</code> — початкове число, <code>reversed</code> — зворотний порядок.</p>
+<div class="ex">
+<ol type="1"><li>type="1"</li><li>цифри</li></ol>
+<ol type="A"><li>type="A"</li><li>великі літери</li></ol>
+<ol type="a"><li>type="a"</li><li>малі літери</li></ol>
+<ol type="I"><li>type="I"</li><li>римські великі</li></ol>
+<ol type="i"><li>type="i"</li><li>римські малі</li></ol>
+<ol start="50"><li>start="50"</li><li>наступний елемент</li></ol>
+<ol reversed><li>reversed</li><li>зворотна нумерація</li><li>третій елемент</li></ol>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;ol type="1"&gt;&lt;li&gt;type="1"&lt;/li&gt;&lt;li&gt;цифри&lt;/li&gt;&lt;/ol&gt;
+&lt;ol type="A"&gt;&lt;li&gt;type="A"&lt;/li&gt;&lt;li&gt;великі літери&lt;/li&gt;&lt;/ol&gt;
+&lt;ol type="a"&gt;&lt;li&gt;type="a"&lt;/li&gt;&lt;li&gt;малі літери&lt;/li&gt;&lt;/ol&gt;
+&lt;ol type="I"&gt;&lt;li&gt;type="I"&lt;/li&gt;&lt;li&gt;римські великі&lt;/li&gt;&lt;/ol&gt;
+&lt;ol type="i"&gt;&lt;li&gt;type="i"&lt;/li&gt;&lt;li&gt;римські малі&lt;/li&gt;&lt;/ol&gt;
+&lt;ol start="50"&gt;&lt;li&gt;start="50"&lt;/li&gt;&lt;li&gt;наступний елемент&lt;/li&gt;&lt;/ol&gt;
+&lt;ol reversed&gt;&lt;li&gt;reversed&lt;/li&gt;&lt;li&gt;зворотна нумерація&lt;/li&gt;&lt;li&gt;третій елемент&lt;/li&gt;&lt;/ol&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s2-10-3" class="sub">2.10.3. HTML Інші списки</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_lists_other.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_lists_other.html</a></p>
+<p>Список визначень <code>&lt;dl&gt;</code> складається з термінів <code>&lt;dt&gt;</code> та описів <code>&lt;dd&gt;</code>. Зі звичайного списку за допомогою CSS можна зробити горизонтальне меню.</p>
+<div class="ex">
+<dl>
+  <dt>Завдання</dt>
+  <dd>Одиниця роботи з виконавцем і дедлайном.</dd>
+  <dt>Дедлайн</dt>
+  <dd>Крайній термін виконання.</dd>
+</dl>
+<ul class="menu">
+  <li><a href="#s2-9">Таблиці</a></li>
+  <li><a href="#s2-10">Списки</a></li>
+  <li><a href="#s3-1">Форми</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+ul.menu { list-style-type: none; margin: 0; padding: 0; background: #2563eb; overflow: hidden; }
+ul.menu li { float: left; }
+ul.menu li a { display: block; padding: 10px 16px; color: #fff; text-decoration: none; }
+ul.menu li a:hover { background: #1d4ed8; }
+&lt;/style&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Завдання&lt;/dt&gt;
+  &lt;dd&gt;Одиниця роботи з виконавцем і дедлайном.&lt;/dd&gt;
+  &lt;dt&gt;Дедлайн&lt;/dt&gt;
+  &lt;dd&gt;Крайній термін виконання.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;ul class="menu"&gt;
+  &lt;li&gt;&lt;a href="#s2-9"&gt;Таблиці&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#s2-10"&gt;Списки&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#s3-1"&gt;Форми&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s3-1">3.1. HTML Форми</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_forms.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_forms.html</a></p>
+<p>Форма (<code>&lt;form&gt;</code>) збирає дані від користувача. Поля вводу найчастіше створюють елементом <code>&lt;input&gt;</code>, а підписи — елементом <code>&lt;label&gt;</code>.</p>
+<div class="ex">
+<form action="#" method="get">
+  <label for="fname">Ім’я:</label><br>
+  <input type="text" id="fname" name="fname" value="Діана"><br>
+  <label for="lname">Прізвище:</label><br>
+  <input type="text" id="lname" name="lname" value="Олєйнікова"><br><br>
+  <input type="submit" value="Надіслати">
+</form>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;form action="#" method="get"&gt;
+  &lt;label for="fname"&gt;Ім’я:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname" value="Діана"&gt;&lt;br&gt;
+  &lt;label for="lname"&gt;Прізвище:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="lname" name="lname" value="Олєйнікова"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Надіслати"&gt;
+&lt;/form&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s3-1-1" class="sub">3.1.1. HTML Атрибути форми</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_forms_attributes.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_forms_attributes.html</a></p>
+<p>Основні атрибути елемента <code>&lt;form&gt;</code>:</p>
+<ul>
+<li><code>action</code> — адреса, куди надсилаються дані;</li>
+<li><code>method</code> — спосіб надсилання: <code>get</code> (у адресному рядку) або <code>post</code> (у тілі запиту);</li>
+<li><code>target</code> — де показати відповідь (<code>_self</code>, <code>_blank</code>);</li>
+<li><code>autocomplete</code> — автозаповнення (<code>on</code>/<code>off</code>);</li>
+<li><code>novalidate</code> — вимкнути перевірку даних браузером.</li>
+</ul>
+<div class="ex">
+<form action="#" method="post" target="_self" autocomplete="on">
+  <label for="u1">Назва завдання:</label>
+  <input type="text" id="u1" name="title">
+  <input type="submit" value="Створити">
+</form>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;form action="#" method="post" target="_self" autocomplete="on"&gt;
+  &lt;label for="u1"&gt;Назва завдання:&lt;/label&gt;
+  &lt;input type="text" id="u1" name="title"&gt;
+  &lt;input type="submit" value="Створити"&gt;
+&lt;/form&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s3-1-2" class="sub">3.1.2. HTML Елементи форми</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_form_elements.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_form_elements.html</a></p>
+<p>Елементи форми: <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;select&gt;</code> (з <code>&lt;option&gt;</code> і <code>&lt;optgroup&gt;</code>), <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;fieldset&gt;</code> із <code>&lt;legend&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;output&gt;</code>.</p>
+<div class="ex">
+<form action="#">
+  <fieldset>
+    <legend>Нове завдання</legend>
+    <p><label for="e-title">Назва:</label>
+       <input type="text" id="e-title" name="title"></p>
+    <p><label for="e-user">Виконавець:</label>
+       <select id="e-user" name="user">
+         <optgroup label="Розробники">
+           <option value="diana">Діана О.</option>
+           <option value="maksym">Максим Д.</option>
+         </optgroup>
+         <optgroup label="Тестувальники">
+           <option value="sofia">Софія Т.</option>
+         </optgroup>
+       </select></p>
+    <p><label for="e-descr">Опис:</label><br>
+       <textarea id="e-descr" name="descr" rows="3" cols="40">Короткий опис завдання</textarea></p>
+    <p><label for="e-tag">Мітка:</label>
+       <input list="tags" id="e-tag" name="tag">
+       <datalist id="tags">
+         <option value="frontend"></option>
+         <option value="backend"></option>
+         <option value="docs"></option>
+       </datalist></p>
+    <p><button type="button">Кнопка button</button></p>
+  </fieldset>
+</form>
+<form action="#" oninput="sum.value = parseInt(a.value) + parseInt(b.value)">
+  <input type="number" id="a" value="2"> +
+  <input type="number" id="b" value="3"> =
+  <output name="sum" for="a b">5</output>
+</form>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;form action="#"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Нове завдання&lt;/legend&gt;
+    &lt;p&gt;&lt;label for="e-title"&gt;Назва:&lt;/label&gt;
+       &lt;input type="text" id="e-title" name="title"&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label for="e-user"&gt;Виконавець:&lt;/label&gt;
+       &lt;select id="e-user" name="user"&gt;
+         &lt;optgroup label="Розробники"&gt;
+           &lt;option value="diana"&gt;Діана О.&lt;/option&gt;
+           &lt;option value="maksym"&gt;Максим Д.&lt;/option&gt;
+         &lt;/optgroup&gt;
+         &lt;optgroup label="Тестувальники"&gt;
+           &lt;option value="sofia"&gt;Софія Т.&lt;/option&gt;
+         &lt;/optgroup&gt;
+       &lt;/select&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label for="e-descr"&gt;Опис:&lt;/label&gt;&lt;br&gt;
+       &lt;textarea id="e-descr" name="descr" rows="3" cols="40"&gt;Короткий опис завдання&lt;/textarea&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label for="e-tag"&gt;Мітка:&lt;/label&gt;
+       &lt;input list="tags" id="e-tag" name="tag"&gt;
+       &lt;datalist id="tags"&gt;
+         &lt;option value="frontend"&gt;&lt;/option&gt;
+         &lt;option value="backend"&gt;&lt;/option&gt;
+         &lt;option value="docs"&gt;&lt;/option&gt;
+       &lt;/datalist&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;button type="button"&gt;Кнопка button&lt;/button&gt;&lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+&lt;form action="#" oninput="sum.value = parseInt(a.value) + parseInt(b.value)"&gt;
+  &lt;input type="number" id="a" value="2"&gt; +
+  &lt;input type="number" id="b" value="3"&gt; =
+  &lt;output name="sum" for="a b"&gt;5&lt;/output&gt;
+&lt;/form&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s3-1-3" class="sub">3.1.3. HTML Типи вводу</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_form_input_types.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_form_input_types.html</a></p>
+<p>Тип поля задається атрибутом <code>type</code> елемента <code>&lt;input&gt;</code>.</p>
+<div class="ex">
+<form action="#">
+  <p>text: <input type="text" name="t1" value="Текст"></p>
+  <p>password: <input type="password" name="t2" value="12345"></p>
+  <p>radio: <input type="radio" name="t3" value="a" checked> A <input type="radio" name="t3" value="b"> B</p>
+  <p>checkbox: <input type="checkbox" name="t4" checked> Так</p>
+  <p>color: <input type="color" name="t5" value="#2563eb"></p>
+  <p>date: <input type="date" name="t6"></p>
+  <p>datetime-local: <input type="datetime-local" name="t7"></p>
+  <p>email: <input type="email" name="t8" placeholder="name@example.com"></p>
+  <p>file: <input type="file" name="t9"></p>
+  <p>hidden: <input type="hidden" name="t10" value="секрет"> (приховане поле, його не видно)</p>
+  <p>month: <input type="month" name="t11"></p>
+  <p>number: <input type="number" name="t12" min="1" max="10" value="3"></p>
+  <p>range: <input type="range" name="t13" min="0" max="100" value="40"></p>
+  <p>search: <input type="search" name="t14"></p>
+  <p>tel: <input type="tel" name="t15" placeholder="+380..."></p>
+  <p>time: <input type="time" name="t16"></p>
+  <p>url: <input type="url" name="t17" placeholder="https://"></p>
+  <p>week: <input type="week" name="t18"></p>
+  <p><input type="submit" value="submit"> <input type="reset" value="reset"> <input type="button" value="button"></p>
+</form>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;form action="#"&gt;
+  &lt;p&gt;text: &lt;input type="text" name="t1" value="Текст"&gt;&lt;/p&gt;
+  &lt;p&gt;password: &lt;input type="password" name="t2" value="12345"&gt;&lt;/p&gt;
+  &lt;p&gt;radio: &lt;input type="radio" name="t3" value="a" checked&gt; A &lt;input type="radio" name="t3" value="b"&gt; B&lt;/p&gt;
+  &lt;p&gt;checkbox: &lt;input type="checkbox" name="t4" checked&gt; Так&lt;/p&gt;
+  &lt;p&gt;color: &lt;input type="color" name="t5" value="#2563eb"&gt;&lt;/p&gt;
+  &lt;p&gt;date: &lt;input type="date" name="t6"&gt;&lt;/p&gt;
+  &lt;p&gt;datetime-local: &lt;input type="datetime-local" name="t7"&gt;&lt;/p&gt;
+  &lt;p&gt;email: &lt;input type="email" name="t8" placeholder="name@example.com"&gt;&lt;/p&gt;
+  &lt;p&gt;file: &lt;input type="file" name="t9"&gt;&lt;/p&gt;
+  &lt;p&gt;hidden: &lt;input type="hidden" name="t10" value="секрет"&gt; (приховане поле, його не видно)&lt;/p&gt;
+  &lt;p&gt;month: &lt;input type="month" name="t11"&gt;&lt;/p&gt;
+  &lt;p&gt;number: &lt;input type="number" name="t12" min="1" max="10" value="3"&gt;&lt;/p&gt;
+  &lt;p&gt;range: &lt;input type="range" name="t13" min="0" max="100" value="40"&gt;&lt;/p&gt;
+  &lt;p&gt;search: &lt;input type="search" name="t14"&gt;&lt;/p&gt;
+  &lt;p&gt;tel: &lt;input type="tel" name="t15" placeholder="+380..."&gt;&lt;/p&gt;
+  &lt;p&gt;time: &lt;input type="time" name="t16"&gt;&lt;/p&gt;
+  &lt;p&gt;url: &lt;input type="url" name="t17" placeholder="https://"&gt;&lt;/p&gt;
+  &lt;p&gt;week: &lt;input type="week" name="t18"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="submit"&gt; &lt;input type="reset" value="reset"&gt; &lt;input type="button" value="button"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s3-1-4" class="sub">3.1.4. HTML Атрибути вводу</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_form_attributes.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_form_attributes.html</a></p>
+<p>Атрибути <code>&lt;input&gt;</code>: <code>value</code>, <code>readonly</code>, <code>disabled</code>, <code>size</code>, <code>maxlength</code>, <code>min</code>/<code>max</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>.</p>
+<div class="ex">
+<form action="#">
+  <p>value: <input type="text" name="a1" value="Початкове значення"></p>
+  <p>readonly: <input type="text" name="a2" value="Лише читання" readonly></p>
+  <p>disabled: <input type="text" name="a3" value="Вимкнено" disabled></p>
+  <p>size: <input type="text" name="a4" size="40" value="Довге поле (size=40)"></p>
+  <p>maxlength: <input type="text" name="a5" maxlength="5" placeholder="не більше 5 символів"></p>
+  <p>min / max: <input type="number" name="a6" min="1" max="5" value="2"></p>
+  <p>multiple: <input type="file" name="a7" multiple></p>
+  <p>pattern: <input type="text" name="a8" pattern="[A-Za-z]{3}" placeholder="3 латинські літери" title="Три латинські літери"></p>
+  <p>placeholder: <input type="text" name="a9" placeholder="Підказка"></p>
+  <p>required: <input type="text" name="a10" required placeholder="обов’язкове поле"></p>
+  <p><input type="submit" value="Перевірити"></p>
+</form>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;form action="#"&gt;
+  &lt;p&gt;value: &lt;input type="text" name="a1" value="Початкове значення"&gt;&lt;/p&gt;
+  &lt;p&gt;readonly: &lt;input type="text" name="a2" value="Лише читання" readonly&gt;&lt;/p&gt;
+  &lt;p&gt;disabled: &lt;input type="text" name="a3" value="Вимкнено" disabled&gt;&lt;/p&gt;
+  &lt;p&gt;size: &lt;input type="text" name="a4" size="40" value="Довге поле (size=40)"&gt;&lt;/p&gt;
+  &lt;p&gt;maxlength: &lt;input type="text" name="a5" maxlength="5" placeholder="не більше 5 символів"&gt;&lt;/p&gt;
+  &lt;p&gt;min / max: &lt;input type="number" name="a6" min="1" max="5" value="2"&gt;&lt;/p&gt;
+  &lt;p&gt;multiple: &lt;input type="file" name="a7" multiple&gt;&lt;/p&gt;
+  &lt;p&gt;pattern: &lt;input type="text" name="a8" pattern="[A-Za-z]{3}" placeholder="3 латинські літери" title="Три латинські літери"&gt;&lt;/p&gt;
+  &lt;p&gt;placeholder: &lt;input type="text" name="a9" placeholder="Підказка"&gt;&lt;/p&gt;
+  &lt;p&gt;required: &lt;input type="text" name="a10" required placeholder="обов’язкове поле"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Перевірити"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s3-1-5" class="sub">3.1.5. HTML Атрибути Input форми</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_form_attributes_form.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_form_attributes_form.html</a></p>
+<p>Атрибути, що належать формі, але задаються на полях і кнопках: <code>form</code> (прив’язка поля до форми за її <code>id</code>), <code>formaction</code>, <code>formmethod</code>, <code>formtarget</code>, <code>formnovalidate</code>. Атрибут <code>novalidate</code> ставиться на самій формі.</p>
+<div class="ex">
+<form action="#" method="get" id="form-main">
+  <label for="f1">Назва:</label>
+  <input type="text" id="f1" name="title" required>
+  <input type="submit" value="Надіслати">
+  <input type="submit" value="Надіслати без перевірки" formnovalidate>
+  <input type="submit" value="Надіслати через POST" formmethod="post" formaction="#">
+</form>
+<p>Поле поза формою, але прив’язане до неї атрибутом form:
+  <input type="text" name="note" form="form-main" placeholder="додаткове поле"></p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;form action="#" method="get" id="form-main"&gt;
+  &lt;label for="f1"&gt;Назва:&lt;/label&gt;
+  &lt;input type="text" id="f1" name="title" required&gt;
+  &lt;input type="submit" value="Надіслати"&gt;
+  &lt;input type="submit" value="Надіслати без перевірки" formnovalidate&gt;
+  &lt;input type="submit" value="Надіслати через POST" formmethod="post" formaction="#"&gt;
+&lt;/form&gt;
+&lt;p&gt;Поле поза формою, але прив’язане до неї атрибутом form:
+  &lt;input type="text" name="note" form="form-main" placeholder="додаткове поле"&gt;&lt;/p&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s4">4. HTML Основи — приклади</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html_examples.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html_examples.html</a></p>
+<h3>HTML-документ</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h1&gt;Мій перший заголовок&lt;/h1&gt;
+  &lt;p&gt;Мій перший абзац.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h3>HTML-заголовки</h3>
+<div class="ex">
+<h1 style="text-align:left;font-size:2em;margin:.67em 0">Заголовок 1</h1>
+<div style="font-size:1.5em;font-weight:bold;margin:.83em 0">Заголовок 2</div>
+<h3>Заголовок 3</h3>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;h1&gt;Заголовок 1&lt;/h1&gt;
+&lt;h2&gt;Заголовок 2&lt;/h2&gt;
+&lt;h3&gt;Заголовок 3&lt;/h3&gt;</code></pre></details>
+<h3>HTML-параграфи</h3>
+<div class="ex">
+<p>Це перший абзац.</p>
+<p>Це другий абзац.</p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;p&gt;Це перший абзац.&lt;/p&gt;
+&lt;p&gt;Це другий абзац.&lt;/p&gt;</code></pre></details>
+<h3>HTML-посилання</h3>
+<div class="ex">
+<a href="https://w3schoolsua.github.io/html/index.html" target="_blank">Це посилання</a>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;a href="https://w3schoolsua.github.io/html/index.html" target="_blank"&gt;Це посилання&lt;/a&gt;</code></pre></details>
+<h3>HTML-зображення</h3>
+<div class="ex">
+<img src="images/task-board.svg" alt="Дошка завдань" width="300" height="150">
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;img src="images/task-board.svg" alt="Дошка завдань" width="300" height="150"&gt;</code></pre></details>
+<h3>HTML-кнопки</h3>
+<div class="ex">
+<button type="button">Клік</button>
+<button type="button" disabled>Вимкнена</button>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;button type="button"&gt;Клік&lt;/button&gt;
+&lt;button type="button" disabled&gt;Вимкнена&lt;/button&gt;</code></pre></details>
+<h3>HTML-списки</h3>
+<div class="ex">
+<ul>
+  <li>Кава</li>
+  <li>Чай</li>
+</ul>
+<ol>
+  <li>Крок перший</li>
+  <li>Крок другий</li>
+</ol>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;ul&gt;
+  &lt;li&gt;Кава&lt;/li&gt;
+  &lt;li&gt;Чай&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Крок перший&lt;/li&gt;
+  &lt;li&gt;Крок другий&lt;/li&gt;
+&lt;/ol&gt;</code></pre></details>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s5">5. HTML5</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/html/html5_intro.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/html/html5_intro.html</a></p>
+<p>HTML5 — поточна версія HTML (рекомендація W3C від 28 жовтня 2014 року; зараз її підтримує WHATWG як «живий стандарт»). Нове в HTML5:</p>
+<ul>
+<li>спрощені <code>&lt;!DOCTYPE html&gt;</code> і <code>&lt;meta charset="UTF-8"&gt;</code>;</li>
+<li>семантичні елементи <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>;</li>
+<li>нові типи полів форм: <code>number</code>, <code>date</code>, <code>time</code>, <code>range</code> та інші;</li>
+<li>графіка й медіа: <code>&lt;svg&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>;</li>
+<li>нові API: Geolocation, Drag and Drop, Web Storage, Web Workers, Server-Sent Events.</li>
+</ul>
+<h3>Семантичні елементи</h3>
+<div class="ex">
+<div class="sem">
+  <header>header — шапка</header>
+  <section>
+    section — розділ
+    <article>article — самостійний фрагмент (наприклад, картка завдання)</article>
+  </section>
+  <footer>footer — підвал</footer>
+</div>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;style&gt;
+.sem { border: 1px solid #333; }
+.sem header, .sem footer { background: #2563eb; color: #fff; padding: 6px 10px; }
+.sem section { padding: 8px 10px; background: #eff6ff; }
+.sem article { padding: 8px 10px; background: #fff7d6; margin: 6px; }
+&lt;/style&gt;
+
+&lt;div class="sem"&gt;
+  &lt;header&gt;header — шапка&lt;/header&gt;
+  &lt;section&gt;
+    section — розділ
+    &lt;article&gt;article — самостійний фрагмент (наприклад, картка завдання)&lt;/article&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;footer — підвал&lt;/footer&gt;
+&lt;/div&gt;</code></pre></details>
+<h3>Нові типи полів</h3>
+<div class="ex">
+<p>number: <input type="number" min="1" max="10" value="5"></p>
+<p>date: <input type="date"></p>
+<p>time: <input type="time"></p>
+<p>range: <input type="range" min="0" max="100" value="60"></p>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;p&gt;number: &lt;input type="number" min="1" max="10" value="5"&gt;&lt;/p&gt;
+&lt;p&gt;date: &lt;input type="date"&gt;&lt;/p&gt;
+&lt;p&gt;time: &lt;input type="time"&gt;&lt;/p&gt;
+&lt;p&gt;range: &lt;input type="range" min="0" max="100" value="60"&gt;&lt;/p&gt;</code></pre></details>
+<h3>SVG і Canvas</h3>
+<div class="ex">
+<svg width="120" height="60" aria-label="Приклад SVG">
+  <rect x="5" y="5" width="110" height="50" rx="10" fill="#2563eb"/>
+  <circle cx="30" cy="30" r="14" fill="#fff"/>
+</svg>
+<canvas id="cv" width="120" height="60" style="border:1px solid #888"></canvas>
+<script>
+  var ctx = document.getElementById("cv").getContext("2d");
+  ctx.fillStyle = "#16a34a";
+  ctx.fillRect(10, 10, 100, 40);
+</script>
+</div>
+<details><summary>Показати код</summary><pre><code>&lt;svg width="120" height="60" aria-label="Приклад SVG"&gt;
+  &lt;rect x="5" y="5" width="110" height="50" rx="10" fill="#2563eb"/&gt;
+  &lt;circle cx="30" cy="30" r="14" fill="#fff"/&gt;
+&lt;/svg&gt;
+&lt;canvas id="cv" width="120" height="60" style="border:1px solid #888"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var ctx = document.getElementById("cv").getContext("2d");
+  ctx.fillStyle = "#16a34a";
+  ctx.fillRect(10, 10, 100, 40);
+&lt;/script&gt;</code></pre></details>
+<h3>Аудіо та відео</h3>
+<p>Елементи <code>&lt;audio&gt;</code> і <code>&lt;video&gt;</code> вставляють мультимедіа без сторонніх плагінів (потрібні власні файли):</p>
+<pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Ваш браузер не підтримує відео.
+&lt;/video&gt;
+&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  Ваш браузер не підтримує аудіо.
+&lt;/audio&gt;</code></pre>
+<h3>Елементи, видалені з HTML5</h3>
+<p><code>acronym</code>, <code>applet</code>, <code>basefont</code>, <code>big</code>, <code>center</code>, <code>dir</code>, <code>font</code>, <code>frame</code>, <code>frameset</code>, <code>noframes</code>, <code>strike</code>, <code>tt</code> — їх замінюють CSS та інші елементи (<code>abbr</code>, <code>object</code>, <code>ul</code>, <code>s</code>, <code>del</code>).</p>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+<section>
+<h2 id="s6">6. HTML Довідник тегів</h2>
+<p class="src">Матеріал: <a href="https://w3schoolsua.github.io/tags/index.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/tags/index.html</a></p>
+<p>Повний довідник: <a href="https://w3schoolsua.github.io/tags/index.html" target="_blank" rel="noopener">https://w3schoolsua.github.io/tags/index.html</a>. Нижче — основні теги, що використані в цій роботі.</p>
+<table class="ref">
+<tr><th>Група</th><th>Теги</th><th>Призначення</th></tr>
+<tr><td>Структура</td><td><code>html</code>, <code>head</code>, <code>title</code>, <code>meta</code>, <code>link</code>, <code>body</code></td><td>каркас документа, метадані, підключення іконки й стилів</td></tr>
+<tr><td>Розділи</td><td><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code></td><td>семантична розмітка сторінки</td></tr>
+<tr><td>Заголовки й текст</td><td><code>h1</code>–<code>h6</code>, <code>p</code>, <code>br</code>, <code>hr</code>, <code>pre</code>, <code>strong</code>, <code>em</code></td><td>заголовки, абзаци, розриви, виділення</td></tr>
+<tr><td>Посилання</td><td><code>a</code></td><td>гіперпосилання та закладки</td></tr>
+<tr><td>Зображення</td><td><code>img</code>, <code>map</code>, <code>area</code>, <code>picture</code>, <code>source</code>, <code>svg</code>, <code>canvas</code></td><td>графіка, карти зображень, адаптивні картинки</td></tr>
+<tr><td>Таблиці</td><td><code>table</code>, <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>, <code>td</code>, <code>colgroup</code>, <code>col</code></td><td>табличні дані</td></tr>
+<tr><td>Списки</td><td><code>ul</code>, <code>ol</code>, <code>li</code>, <code>dl</code>, <code>dt</code>, <code>dd</code></td><td>маркований, нумерований списки та список визначень</td></tr>
+<tr><td>Форми</td><td><code>form</code>, <code>fieldset</code>, <code>legend</code>, <code>label</code>, <code>input</code>, <code>select</code>, <code>option</code>, <code>optgroup</code>, <code>textarea</code>, <code>button</code>, <code>datalist</code>, <code>output</code></td><td>збір даних від користувача</td></tr>
+<tr><td>Стиль і скрипти</td><td><code>style</code>, <code>script</code></td><td>вбудовані CSS та JavaScript</td></tr>
+</table>
+<p class="top"><a href="#top">↑ До змісту</a></p>
+</section>
+</main>
+
+<footer>
+  <hr>
+  <p>© 2026 Олєйнікова Діана, ІМ-44. Самостійна робота №1.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" fill="#0f766e"/>
+  <text x="150" y="140" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">TaskTracker</text>
+  <text x="150" y="176" font-family="Arial, sans-serif" font-size="22" fill="#fff" text-anchor="middle">вузький екран</text>
+</svg>
